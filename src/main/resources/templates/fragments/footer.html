@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<body>
+
+<!-- Footer fragment -->
+<div th:fragment="footer">
+
+	<!-- Footer content -->
+	<footer class="site-footer">
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm-12 col-md-6">
+		      <h6>About</h6>
+		      <p class="text-justify">TODO: Think and insert paragraph describing the purpose of my blog</p>
+		    </div>
+		
+		    <div class="col-xs-6 col-md-3">
+		      <h6>Categories</h6>
+		      <ul class="footer-links">
+		        <li><a href="#">Java</a></li>
+		      </ul>
+		    </div>
+		
+		    <div class="col-xs-6 col-md-3">
+		      <h6>Quick Links</h6>
+		      <ul class="footer-links">
+		        <li><a href="http://scanfcode.com/about/">About Me</a></li>
+		        <li><a href="http://scanfcode.com/contact/">Contact Me</a></li>
+		        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+		        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		  <hr>
+		</div>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-8 col-sm-6 col-xs-12">
+		      <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+		   <a href="#">JMP.dev</a>.
+		      </p>
+		    </div>
+		
+		    <div class="col-md-4 col-sm-6 col-xs-12">
+		      <ul class="social-icons">
+		        <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+		        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+		        <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+		        <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+	
+	<script th:src="@{webjars/popper.js/2.0.2/umd/popper.min.js}"></script>
+
+	<script th:src="@{webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+
+</div>
+
+</body>
+</html>
