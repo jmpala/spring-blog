@@ -22,7 +22,7 @@ public class UserServiceImp implements UserService {
 	private final RoleRepository roleRepository;
 	private final PasswordEncoder passwordEncoder;
 	
-	private static final String USER_ROLE = "USER_ROLE";
+	private static final String USER_ROLE = "ROLE_USER";
 	
 	@Override
 	public Optional<User> findByUsername(String username) {
@@ -37,6 +37,7 @@ public class UserServiceImp implements UserService {
 	@Override
 	public User save(User user) {
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		user.setActive(1);
 		Set<Role> roles = new HashSet<Role>();
 		roles.add(roleRepository.findByRole(USER_ROLE));
 		user.setRoles(roles);
