@@ -22,10 +22,15 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Table(name = "posts")
+@Table(name = "post")
 @Data
+@EqualsAndHashCode(exclude = "user")
+@ToString(exclude = "user")
 public class Post {
 
 	@Id

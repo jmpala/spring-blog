@@ -18,10 +18,15 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Table(name = "comments")
+@Table(name = "comment")
 @Data
+@EqualsAndHashCode(exclude = {"post", "user"})
+@ToString(exclude = {"post", "user"})
 public class Comment {
 
 	@Id

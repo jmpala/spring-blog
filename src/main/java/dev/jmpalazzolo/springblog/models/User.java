@@ -19,9 +19,10 @@ import javax.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @Data
 public class User {
 
@@ -41,9 +42,12 @@ public class User {
 	private String username;
 	
 	@Column(name = "password", nullable = false)
-	@Length(min = 8, max = 20, message = "Please provide a password between 8 and 20 characters")
+	@Length(min = 8, max = 100, message = "Please provide a password between 8 and 20 characters")
 	@NotEmpty(message = "Please provide a password")
 	private String password;
+	
+	@Column(name = "active", nullable = false)
+    private int active;
 	
 	@Column(name = "name", nullable = false)
 	@NotEmpty(message = "Please provide a name")

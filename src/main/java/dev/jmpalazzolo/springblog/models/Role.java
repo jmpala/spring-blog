@@ -12,10 +12,15 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "role")
 @Data
+@EqualsAndHashCode(exclude = "users")
+@ToString(exclude = "users")
 public class Role {
 	
 	@Id
