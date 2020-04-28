@@ -1,0 +1,106 @@
+@import './reset.scss';
+
+$navbarfootercolor:#26272b;
+$mainsectionbackground:#f8f9fa;
+$jumbotroncontentcolor:white;
+$footerIconsSize:32px;
+
+@font-face {
+    font-family: "roboto-monospace";
+    src: ulr("fonts/RobotoMono-Medium");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "roboto-monospace";
+}
+
+#container-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $mainsectionbackground !important;
+}
+
+#navbar {
+    background: $navbarfootercolor !important;
+}
+
+#index-jumbotron {
+    height: 400px;
+    width: 100%;
+    color: $jumbotroncontentcolor;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url('/images/banner-index.png');
+
+    hr {
+        height: 1px;
+        border: 0px;
+        background: $jumbotroncontentcolor; 
+        background: -webkit-radial-gradient($jumbotroncontentcolor 35%, transparent 20%); 
+        background: -o-radial-gradient($jumbotroncontentcolor 35%, transparent 20%); 
+        background: -moz-radial-gradient($jumbotroncontentcolor 35%, transparent 20%);
+        background: radial-gradient($jumbotroncontentcolor 35%, transparent 20%);
+    }
+}
+
+.kiss-pop {
+    color: red;
+    text-decoration: underline;
+}
+
+.index-carousel {
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.69);
+}
+
+@each $banner in (
+    banner1 #AAAAAA,
+    banner2 #BBBBBB,
+    benner3 #CCCCCC
+) {
+    .#{nth($banner, 1)} {
+        height: 400px;
+        width: 100%;
+        background-color: #{nth($banner, 2)};
+        color: black;
+        border-radius: 7px 7px 7px 7px;
+        -moz-border-radius: 7px 7px 7px 7px;
+        -webkit-border-radius: 7px 7px 7px 7px;
+        border: 0px solid #000000;
+    }
+}
+
+.slick-dots {
+    bottom: 0px!important;
+}
+
+footer {
+    .icons-container {
+        list-style:none;
+    }
+    .icon-container {
+        height: $footerIconsSize;
+        width: $footerIconsSize;
+        display: inline-block;
+    }
+    .icon {
+        height: auto;
+        width: 100%;
+        filter: brightness(0) invert(1);
+    }
+}
