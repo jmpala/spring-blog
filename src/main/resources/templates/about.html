@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<div th:replace="/fragments/header :: header-css"/>
+
+</head>
+<body id="aboutpage">
+
+	<div th:replace="/fragments/header :: header"/>
+
+    <main id="mainsection" class="container">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <h1 class="h1 text-center">About me...</h1>
+            </div>
+            <div class="col-sm-9"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-fluid" th:src="@{/images/placeholder-about.jpeg}">
+            </div>
+            <div class="col-sm-9">
+                <p class="text-justify my-sm-3">Since the first time I've got a computer, on the year 2000, I was amazed on the magic that surrounds the question, “How do computers work?”</p>
+                <p class="text-justify my-sm-3">I grew-up playing and trying to hack video-games. I remember using programs to change games behavior to my advantage, but still asking me, what were those programs doing under the hood?</p>
+                <p class="text-justify my-sm-3">Years later, with the advance of internet, my curiosity brought me to start learning programing by myself and landed jobs on a couple of big companies as a Functional Analyst, Java and IOS developer. There I gain experience on teamwork, several technologies and how project are managed.</p>
+                <p class="text-justify my-sm-3">Finally, this site is a mixture of a portfolio and blog, where I join my passion of programming with the things that interest me.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="h1">Projects</h1>
+                <ul>
+                    <li>This websyte <a href="#">(Github repo)</a> <span class="badge badge-pill badge-warning">In progress</span> <span class="badge badge-secondary">Personal Project</span></li>
+                    <li>AO-Finisterra <a href="#">(Github repo)</a> <span class="badge badge-pill badge-warning">In progress</span> <span class="badge badge-secondary">Colavoration</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+	<div th:replace="/fragments/footer :: footer"/>
+
+    <script th:src="@{js/slick/slick.js}"></script>
+    <script th:src="@{js/index.js}"></script>
+
+</body>
+</html>
