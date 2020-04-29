@@ -108,3 +108,11 @@ target/
 # End of https://www.gitignore.io/api/java,eclipse,java-web,code-java
 .vscode/settings.json
 .vscode/launch.json
+
+# CSS ignore
+src/main/resources/static/css/blog/blog.css
+src/main/resources/static/css/blog/indexpage.css
+src/main/resources/static/css/bs-scss/bootstrap-grid.css
+src/main/resources/static/css/bs-scss/bootstrap-reboot.css
+src/main/resources/static/css/bs-scss/bootstrap.css
+src/main/resources/static/css/others/reset.css
